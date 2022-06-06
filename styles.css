@@ -1,0 +1,145 @@
+* {
+  all: unset;
+  display: revert;
+  cursor: revert;
+  /*overstående nustiller alle HTML regler for H1, h2 mm.*/
+  box-sizing: border-box;
+  /* ovenstående inkluderer padding og border i elementets totale højde og bredde */
+}
+
+html {
+  /* farvevariabler */
+  --green: #60e042;
+  --pink: #ffb9ef;
+  --beige: #ebe5dc;
+
+  /* gapvariabler */
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 4rem;
+
+  background-color: var(--beige);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: solid 2px var(--pink);
+  margin-top: 10px;
+  margin-inline: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: north;
+  src: url(fonte/north_carossela-webfont.woff2);
+}
+@font-face {
+  font-family: apple;
+  src: url(fonte/applegaramond-webfont.woff2);
+}
+@font-face {
+  font-family: apple_bold;
+  src: url(fonte/applegaramond-bold-webfont.woff2);
+}
+
+/* generelle fontstørrelse og fonttyper */
+h1 {
+  font-size: 3rem;
+  font-family: north;
+}
+
+h2,
+h3,
+h4,
+p {
+  font-family: apple, "Times New Roman", Times, serif;
+  font-kerning: auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1rem;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* burgermenu */
+
+.logo {
+  font-family: north;
+  font-size: 2rem;
+}
+
+.banner {
+  padding-block: 10px;
+  display: flex;
+  flex-flow: wrap; /* når der ikke er plads mere - rykker den ned under */
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: solid 2px var(--green);
+  margin-inline: 20px;
+
+  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
+}
+
+.main-menu {
+  font-family: north;
+  font-size: 2rem;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: var(--space-m);
+}
+
+.main-menu a:hover {
+  border-bottom: 5px solid var(--pink);
+}
+
+/* burgermenu */
+.toggle-btn {
+  background: transparent;
+  border: none;
+
+  font-size: 2rem;
+  cursor: pointer;
+
+  display: none; /* Skjul knappen som standard */
+}
+
+@media (max-width: 1200px) {
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 1200px */
+  }
+
+  .main-menu {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .main-menu ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .main-menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    border-top: 1px solid #000;
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+}
