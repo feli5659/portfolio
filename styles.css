@@ -24,7 +24,7 @@ html {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  border-top: solid 2px var(--pink);
+  border-top: solid 1px black;
   margin-top: 10px;
   margin-inline: 20px;
 }
@@ -45,6 +45,10 @@ img {
 @font-face {
   font-family: apple_bold;
   src: url(fonte/applegaramond-bold-webfont.woff2);
+}
+@font-face {
+  font-family: oldnews;
+  src: url(fonte/oldnewspapertypes-webfont.woff2);
 }
 
 /* generelle fontstørrelse og fonttyper */
@@ -68,11 +72,19 @@ h3 {
   font-size: 1.5rem;
 }
 h4 {
-  font-size: 1rem;
+  font-family: oldnews, apple, "Times New Roman", Times, serif;
+  font-size: 0.8rem;
+  line-height: 1rem;
 }
 p {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.undertitel {
+  font-size: 0.9rem;
+  font-kerning: none;
+  font-family: oldnews, apple, "Times New Roman", Times, serif;
 }
 
 /* burgermenu */
@@ -88,7 +100,7 @@ p {
   flex-flow: wrap; /* når der ikke er plads mere - rykker den ned under */
   justify-content: space-between;
   align-items: baseline;
-  border-bottom: solid 2px var(--green);
+  border-bottom: solid 1px black;
   margin-inline: 20px;
 
   /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
@@ -142,4 +154,44 @@ p {
     flex: 1 1 100%;
     flex-flow: column;
   }
+}
+
+/* -------forside------- */
+
+.grid_col_3 h2,
+.p1 {
+  border-inline: solid 1px black;
+  padding-inline: 20px;
+}
+
+.p1 {
+  margin-block: var(--space-s);
+}
+.grid_col_3 div {
+  display: flex;
+  border-left: solid 1px black;
+  padding-left: 20px;
+  border-bottom: solid 1px black;
+  padding-bottom: var(--space-s);
+}
+
+.grid_col_3_2 {
+  margin-top: var(--space-m);
+  padding-block: var(--space-s);
+  border-top: solid 1px black;
+  list-style: none;
+  font-family: apple_bold;
+  border-bottom: solid 1px black;
+}
+
+.grid_col_3_2 ul {
+  display: flex;
+  gap: 2rem;
+  padding-block: var(--space-s);
+}
+
+.grid_col_3_2 li {
+  border-top: solid 1px black;
+
+  cursor: pointer;
 }
