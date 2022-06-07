@@ -108,7 +108,7 @@ p {
 
 .main-menu {
   font-family: north;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .main-menu ul {
@@ -167,11 +167,12 @@ p {
 .p1 {
   margin-block: var(--space-s);
 }
+.p2 {
+  margin-block: var(--space-s);
+  padding-inline: 20px;
+  border-inline: solid 1px black;
+}
 .grid_col_3 div {
-  display: flex;
-  border-left: solid 1px black;
-  padding-left: 20px;
-  border-bottom: solid 1px black;
   padding-bottom: var(--space-s);
 }
 
@@ -182,16 +183,27 @@ p {
   list-style: none;
   font-family: apple_bold;
   border-bottom: solid 1px black;
+  display: grid;
+  margin-bottom: var(--space-l);
 }
 
 .grid_col_3_2 ul {
   display: flex;
   gap: 2rem;
-  padding-block: var(--space-s);
+  padding-block: var(--space-m);
+  margin-bottom: var(--space-s);
 }
 
 .grid_col_3_2 li {
   border-top: solid 1px black;
 
   cursor: pointer;
+}
+
+/* -----------DESKTOP------------ */
+
+@media (min-width: 800px) {
+  /* forside */
+  .titel_col_3 {
+  }
 }

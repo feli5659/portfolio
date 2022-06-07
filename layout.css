@@ -50,3 +50,26 @@
   border-top: solid 1px black;
   max-width: 100%;
 }
+
+.grid_col_3 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* -----------DESKTOP------------ */
+
+@media (min-width: 800px) {
+  /* forside */
+  .grid_col_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .grid_col_3 h2,
+  .p1 {
+    grid-column: 2;
+  }
+  .p2 {
+    grid-column: 3;
+  }
+}
