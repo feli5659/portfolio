@@ -196,6 +196,12 @@ p {
   padding-inline: 10px;
   border-inline: solid 1px black;
 }
+.p3 {
+  margin-block: var(--space-s);
+  padding-inline: 10px;
+  border-inline: solid 1px black;
+  text-align: right;
+}
 .grid_col_3 div {
   padding-bottom: var(--space-s);
 }
