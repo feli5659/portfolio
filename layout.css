@@ -66,22 +66,10 @@
   display: grid;
   grid-template-columns: 1fr;
 }
-
-/* om mig side */
-.cv_titel {
-  margin-block: var(--space-s);
-  padding-inline: 20px;
-  border-inline: 1px solid black;
+.col_3 img {
   order: 1;
 }
-
-.cv_titel img {
-  padding-block: 20px;
-}
-
-.uddannelse img {
-  padding-block: 10px;
-}
+/* om mig side */
 
 /* temasider */
 
@@ -118,40 +106,30 @@ footer h3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .col_2 {
+    display: grid;
+  }
+  .col_2 h2,
+  .col_2 p {
+    grid-column: 2;
+    margin-left: var(--space-s);
+  }
+
+  .col_3 {
+    display: grid;
+  }
+
+  .col_3 p,
+  .col_3 img {
+    grid-column: 3;
+    margin-left: var(--space-s);
+  }
+  .kvadrat_forside {
+    margin-left: var(--space-s);
+    max-width: 60%;
+  }
   .forside_look {
     grid-column: 1;
-  }
-
-  .grid_col_3 h2 {
-    grid-column: 2;
-    grid-row: 1;
-    margin-left: var(--space-s);
-  }
-  .p1 {
-    grid-column: 2;
-    grid-row: 1;
-    margin-left: var(--space-s);
-    margin-top: 7rem;
-  }
-  .p2 {
-    grid-column: 2;
-    grid-row: 1;
-    margin-left: var(--space-s);
-    margin-top: 22rem;
-  }
-  .p3 {
-    grid-column: 3;
-    grid-row: 1;
-    margin-left: var(--space-s);
-  }
-
-  .kvadrat_forside {
-    grid-column: 3;
-    grid-row: 1;
-    margin-left: var(--space-m);
-    margin-top: 15rem;
-    width: 70%;
-    align-self: right;
   }
 
   /* om mig side */
@@ -162,13 +140,21 @@ footer h3 {
   .cv_titel img {
     grid-column: 1;
     grid-column: 1;
-    max-width: 60%;
-    grid-row: span 4;
+    max-width: 50%;
   }
-  .cv_titel h2,
-  .cv_titel h3,
-  .cv_titel p {
+  .cv_2 {
     grid-column: 2;
+    grid-row: 1;
+  }
+  .cv_3 {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 13rem;
+  }
+
+  .sect_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .uddannelse {
@@ -184,21 +170,10 @@ footer h3 {
     grid-column: 2;
     gap: 10px;
   }
-  .erfaring {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .hvem_er,
-  p {
+
+  .hvem_er {
     grid-column: 1;
   }
-  .erfaring_h2 {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .erfaring_ul {
-    grid-column: 2;
-    grid-row: 2;
-  }
+
   /* temasider */
 }
