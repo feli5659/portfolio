@@ -1,12 +1,3 @@
-* {
-  all: unset;
-  display: revert;
-  cursor: revert;
-  /*overstående nustiller alle HTML regler for H1, h2 mm.*/
-  box-sizing: border-box;
-  /* ovenstående inkluderer padding og border i elementets totale højde og bredde */
-}
-
 html {
   /* farvevariabler */
   --green: #60e042;
@@ -24,7 +15,7 @@ html {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  border-top: solid 1px black;
+  /* border-top: solid 1px black; */
   margin-top: 10px;
   margin-inline: 20px;
 }
@@ -65,6 +56,10 @@ p {
   font-kerning: auto;
 }
 
+.titel_col_3 h1 {
+  font-size: 2rem;
+}
+
 h2 {
   font-size: 2.5rem;
 }
@@ -85,6 +80,15 @@ p {
   font-size: 0.9rem;
   font-kerning: none;
   font-family: oldnews, apple, "Times New Roman", Times, serif;
+}
+
+.website_knap {
+  border: double 4px black;
+  font-family: apple_bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 /* burgermenu */
@@ -133,6 +137,26 @@ p {
   display: none; /* Skjul knappen som standard */
 }
 
+/* -----------om mig side------------ */
+.uddannelse {
+  margin-block: var(--space-s);
+  padding-inline: 20px;
+  border-right: 1px solid black;
+  list-style: none;
+  border-bottom: 1px solid black;
+}
+
+.uddannelse_ul {
+  gap: var(--space-l);
+}
+
+.erfaring {
+  margin-block: var(--space-s);
+  padding-inline: 20px;
+  border-left: 1px solid black;
+  list-style: none;
+}
+
 @media (max-width: 1200px) {
   .toggle-btn {
     display: block; /* Vis knappen, når viewporten maksimalt er 1200px */
@@ -161,7 +185,7 @@ p {
 .grid_col_3 h2,
 .p1 {
   border-inline: solid 1px black;
-  padding-inline: 20px;
+  padding-inline: 10px;
 }
 
 .p1 {
@@ -169,7 +193,7 @@ p {
 }
 .p2 {
   margin-block: var(--space-s);
-  padding-inline: 20px;
+  padding-inline: 10px;
   border-inline: solid 1px black;
 }
 .grid_col_3 div {
@@ -182,7 +206,6 @@ p {
   border-top: solid 1px black;
   list-style: none;
   font-family: apple_bold;
-  border-bottom: solid 1px black;
   display: grid;
   margin-bottom: var(--space-l);
 }
@@ -200,10 +223,56 @@ p {
   cursor: pointer;
 }
 
+/* temasider */
+
+.grid_col_2 {
+  margin-block: var(--space-s);
+}
+.grid_col_2 h2 {
+  padding-bottom: var(--space-s);
+}
+.grid_col_2 img {
+  margin-top: 20px;
+}
+
+.grid_col_3_row_2 {
+  margin-block: 10px;
+}
+.grid_col_3_row_2 h2 {
+  padding-bottom: 10px;
+}
+
+.grid_col_2_row_2 {
+  list-style: none;
+}
+.grid_col_2_row_2 h3 {
+  padding-block: 10px;
+}
+.grid_col_2_row_2 ul {
+  padding-bottom: 20px;
+  font-family: apple_bold;
+}
+.grid_col_2_row_2 li {
+  border-top: solid 1px black;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-inline: 20px;
+}
+
 /* -----------DESKTOP------------ */
 
 @media (min-width: 800px) {
-  /* forside */
-  .titel_col_3 {
+  /* om mig side */
+  .erfaring_ul {
+    border-left: solid 1px black;
+    padding-inline: 20px;
+  }
+  .erfaring_h2 {
+    padding-inline: 20px;
+  }
+
+  .hvem_er,
+  p {
+    padding-right: 10px;
   }
 }
