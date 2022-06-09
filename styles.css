@@ -12,23 +12,11 @@ html {
   background-color: var(--beige);
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
+main,
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 70px;
-  overflow-x: hidden;
-}
-
-main {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 10px;
-  margin-inline: 20px;
 }
 
 img {
@@ -91,11 +79,6 @@ p {
   line-height: 1.5rem;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 .undertitel {
   font-size: 0.9rem;
   font-kerning: none;
@@ -111,176 +94,157 @@ header {
   margin-bottom: 20px;
 }
 
-/* jeg giver den en position absolute for at da den skal opføre sig ens ud i både mobil og desktop alt efter viewport */
-
 /* burgermenu */
-nav.main-nav {
-  position: absolute;
-  right: -200px;
-  background-color: var(--beige);
-  height: 100vh;
-  width: 200px;
-  z-index: 10;
-  transition: right 0.2s ease-in;
-}
 
-nav.main-nav.active {
-  right: 0;
-  transition: right 0.2s ease-in;
-}
-
-.menu-toggle {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  cursor: pointer;
-  transition: right 0.2s ease-in;
+.logo {
+  font-family: north;
   font-size: 2rem;
 }
-.menu-toggle.active {
-  position: absolute;
-  top: 20px;
-  right: 230px;
-  transition: right 0.2s ease-in;
+
+.banner {
+  padding-block: 10px;
+  display: flex;
+  flex-flow: wrap; /* når der ikke er plads mere - rykker den ned under */
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: solid 1px black;
+  margin-inline: 10px;
+
+  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
 }
 
-nav.main-nav ul {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  list-style: none;
-  text-align: center;
-}
-nav.main-nav ul li {
-  margin-block: 20px;
+.main-menu {
   font-family: north;
   font-size: 1.5rem;
 }
 
-nav.main-nav h1.logo {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translate(-50%);
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: var(--space-m);
 }
 
-.logo_1 {
-  font-family: north;
-  font-size: 3rem;
-  /* position: absolute;
-  top: 10px;
-  left: 1px; */
+.main-menu a:hover {
+  border-bottom: 5px solid var(--pink);
 }
 
-/* -------forside------- */
+/* burgermenu */
+.toggle-btn {
+  background: transparent;
+  border: none;
 
-.grid_col_3 h2,
-.p1 {
+  font-size: 2rem;
+  cursor: pointer;
+
+  display: none; /* Skjul knappen som standard */
+}
+
+@media (max-width: 1200px) {
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 1200px */
+  }
+
+  .main-menu {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .main-menu ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .main-menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    border-top: 1px solid #000;
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+}
+
+/* ---------------forside-------------- */
+
+.grid_col_3 {
   border-inline: solid 1px black;
   padding-inline: 10px;
+}
+
+.col_2 {
+  border-inline: solid 1px black;
+  padding-inline: var(--space-s);
 }
 
 .p1 {
   margin-block: var(--space-s);
 }
 .p2 {
-  margin-block: var(--space-s);
-  padding-inline: 40px;
-  border-inline: solid 1px black;
+  text-align: center;
+  /* border-inline: solid 1px black; */
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2rem;
-  text-align: center;
+  padding-bottom: var(--space-s);
 }
 .p3 {
   padding-top: var(--space-s);
-  padding-inline: 10px;
   border-inline: solid 1px black;
+  padding-inline: var(--space-s);
 }
-.grid_col_3 div {
-  padding-bottom: var(--space-s);
+
+.col_3 img {
+  padding: var(--space-s);
 }
 
 .grid_col_3_2 {
-  margin-top: var(--space-m);
-  margin-bottom: var(--space-l);
+  margin-block: var(--space-m);
   padding-block: var(--space-s);
   border-top: solid 1px black;
   list-style: none;
   font-family: apple_bold;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
   text-align: center;
+  margin-inline: var(--space-s);
 }
 
 .grid_col_3_2 ul {
   display: flex;
-  gap: 2rem;
+  align-self: center;
+  gap: 3rem;
+  font-size: 1rem;
   padding-block: var(--space-m);
-  margin-bottom: var(--space-s);
-  margin-top: var(--space-m);
+  margin-block: var(--space-s);
 }
 
 .grid_col_3_2 li {
   border-top: solid 1px black;
-
   cursor: pointer;
 }
 
+.forside_look {
+  margin-block: 10px;
+  padding-block: var(--space-s);
+  padding-inline: 10px;
+
+  max-width: 100%;
+}
+
 /* -----------om mig side------------ */
-.uddannelse {
-  margin-block: var(--space-s);
-  padding-inline: 10px;
-  border-right: 1px solid black;
-  list-style: none;
-  border-bottom: 1px solid black;
-}
-
-.uddannelse h2 {
-  margin-bottom: 20px;
-}
-
-.uddannelse li {
-  margin-right: 20px;
-  margin-bottom: 100px;
-  font-family: apple_bold;
-  font-size: 1.1rem;
-  border-top: solid 1px black;
-}
-
-.erfaring {
-  margin-block: var(--space-s);
-  padding-inline: 10px;
-  border-right: 1px solid black;
-  list-style: none;
-  border-bottom: 1px solid black;
-}
-.erfaring h2 {
-  margin-bottom: 20px;
-}
-.erfaring li {
-  margin-right: 20px;
-  margin-bottom: 100px;
-  font-family: apple_bold;
-  font-size: 1.1rem;
-  border-top: solid 1px black;
-}
-
 .cv_titel {
   margin-block: var(--space-s);
+  padding-inline: 20px;
 }
 
 .cv_titel img {
-  margin-inline: 40px;
+  margin-inline: 20px;
   max-width: 80%;
 }
 
 .cv_2 {
   margin-block: var(--space-s);
-  padding-inline: 10px;
+  padding-inline: 20px;
   border-inline: 1px solid black;
 }
 .cv_2 h3 {
@@ -288,11 +252,22 @@ nav.main-nav h1.logo {
 }
 .cv_3 {
   margin-block: var(--space-m);
-  padding-inline: 10px;
+  padding-inline: 20px;
   border-inline: 1px solid black;
 }
 .cv_3 p {
   margin-block: var(--space-s);
+}
+.uddannelse {
+  padding-inline: 40px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.erfaring {
+  padding-inline: 40px;
+  margin-right: 20px;
+  text-align: right;
 }
 
 .hvem_er {
@@ -300,13 +275,28 @@ nav.main-nav h1.logo {
   padding-inline: 20px;
   border-left: 1px solid black;
 }
-.hvem_er h2 {
-  margin-bottom: 10px;
-}
 .hvem_er p {
   padding-top: 10px;
 }
 
+.uddannelse {
+  margin-block: var(--space-s);
+  padding-inline: 20px;
+  border-right: 1px solid black;
+  list-style: none;
+  border-bottom: 1px solid black;
+}
+
+.uddannelse_ul {
+  gap: var(--space-l);
+}
+
+.erfaring {
+  margin-block: var(--space-s);
+  padding-inline: 20px;
+  border-left: 1px solid black;
+  list-style: none;
+}
 /* temasider */
 
 .grid_col_2 {
@@ -346,11 +336,29 @@ nav.main-nav h1.logo {
 /* -----------DESKTOP------------ */
 
 @media (min-width: 800px) {
-  .grid_col_3_2 ul {
-    font-size: 1.5rem;
+  /* -----------forside------------ */
+  .banner {
+    margin-inline: 0;
   }
 
-  .p3 {
-    margin-left: 10px;
+  .col_2 {
+    padding-top: var(--space-s);
   }
+  .col_2 h2 {
+    height: 100px;
+  }
+  .p1 {
+    margin-block: 0;
+  }
+  .p3 {
+    text-align: right;
+    margin-left: 10px;
+    border-inline: 0;
+  }
+
+  .grid_col_3_2 ul {
+    font-size: 1.3rem;
+  }
+
+  /* om mig side */
 }
