@@ -234,17 +234,17 @@ p {
 /* -----------om mig side------------ */
 .cv_titel {
   margin-block: var(--space-s);
-  padding-inline: 20px;
+  padding-inline: 10px;
 }
 
 .cv_titel img {
-  margin-inline: 20px;
-  max-width: 80%;
+  margin-inline: var(--space-s);
+  max-width: 90%;
 }
 
 .cv_2 {
   margin-block: var(--space-s);
-  padding-inline: 20px;
+  padding-inline: var(--space-s);
   border-inline: 1px solid black;
 }
 .cv_2 h3 {
@@ -259,44 +259,63 @@ p {
   margin-block: var(--space-s);
 }
 .uddannelse {
-  padding-inline: 40px;
+  margin-block: var(--space-s);
+  padding-inline: 30px;
+  list-style: none;
+  border-bottom: 1px solid black;
+  margin-inline: 10px;
+}
+
+.uddannelse h2 {
+  margin-bottom: 20px;
+}
+
+.uddannelse li {
   margin-right: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 100px;
+  font-family: apple_bold;
+  font-size: 1.1rem;
+  border-top: solid 1px black;
+}
+
+.udd_img {
+  padding-bottom: 10px;
 }
 
 .erfaring {
-  padding-inline: 40px;
-  margin-right: 20px;
-  text-align: right;
-}
-
-.hvem_er {
-  margin-block: var(--space-m);
-  padding-inline: 20px;
-  border-left: 1px solid black;
-}
-.hvem_er p {
-  padding-top: 10px;
-}
-
-.uddannelse {
   margin-block: var(--space-s);
-  padding-inline: 20px;
+  padding-inline: 10px;
   border-right: 1px solid black;
   list-style: none;
   border-bottom: 1px solid black;
 }
-
-.uddannelse_ul {
-  gap: var(--space-l);
+.erfaring h2 {
+  margin-bottom: 20px;
+}
+.erfaring li {
+  margin-right: 20px;
+  margin-bottom: 100px;
+  font-family: apple_bold;
+  font-size: 1.1rem;
+  border-top: solid 1px black;
 }
 
-.erfaring {
+.sect_3 {
   margin-block: var(--space-s);
-  padding-inline: 20px;
-  border-left: 1px solid black;
-  list-style: none;
+  padding-inline: 10px;
 }
+
+.hvem_er {
+  margin-block: var(--space-m);
+  padding-inline: var(--space-s);
+  border-inline: 1px solid black;
+}
+
+.hvem_er h2,
+.hvem_er h3 {
+  padding-bottom: 10px;
+}
+
 /* temasider */
 
 .grid_col_2 {
