@@ -285,7 +285,6 @@ p {
 .erfaring {
   margin-block: var(--space-s);
   padding-inline: 10px;
-  border-right: 1px solid black;
   list-style: none;
   border-bottom: 1px solid black;
 }
@@ -380,4 +379,20 @@ p {
   }
 
   /* om mig side */
+  .uddannelse {
+    height: 680px;
+  }
+  .uddannelse li {
+    font-size: 1.3rem;
+    margin-bottom: 210px;
+  }
+
+  .erfaring {
+    text-align: right;
+    margin-left: 20px;
+  }
+
+  .erfaring li {
+    margin-right: 0;
+  }
 }
