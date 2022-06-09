@@ -16,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   line-height: 2rem;
-  border-bottom: solid 1px black;
+  border-block: solid 1px black;
   padding-bottom: 10px;
 }
 
@@ -120,6 +120,7 @@ footer h3 {
     justify-content: end;
     text-align: end;
     align-items: right;
+    overflow: hidden;
   }
 
   /* .col_3 p,

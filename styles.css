@@ -12,16 +12,21 @@ html {
   background-color: var(--beige);
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 70px;
+  overflow-x: hidden;
 }
 
 main {
   max-width: 1200px;
   margin: 0 auto;
-  /* border-top: solid 1px black; */
   margin-top: 10px;
   margin-inline: 20px;
 }
@@ -86,6 +91,11 @@ p {
   line-height: 1.5rem;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .undertitel {
   font-size: 0.9rem;
   font-kerning: none;
@@ -101,93 +111,66 @@ p {
   margin-bottom: 20px;
 }
 
-/* burgermenu */
+/* jeg giver den en position absolute for at da den skal opføre sig ens ud i både mobil og desktop alt efter viewport */
 
-.logo {
-  font-family: north;
+/* burgermenu */
+nav.main-nav {
+  position: absolute;
+  right: -200px;
+  background-color: var(--beige);
+  height: 100vh;
+  width: 200px;
+  z-index: 10;
+  transition: right 0.2s ease-in;
+}
+
+nav.main-nav.active {
+  right: 0;
+  transition: right 0.2s ease-in;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  transition: right 0.2s ease-in;
   font-size: 2rem;
 }
-
-.banner {
-  padding-block: 10px;
-  display: flex;
-  flex-flow: wrap; /* når der ikke er plads mere - rykker den ned under */
-  justify-content: space-between;
-  align-items: baseline;
-  border-bottom: solid 1px black;
-  margin-inline: 20px;
-
-  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
+.menu-toggle.active {
+  position: absolute;
+  top: 20px;
+  right: 230px;
+  transition: right 0.2s ease-in;
 }
 
-.main-menu {
+nav.main-nav ul {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+nav.main-nav ul li {
+  margin-block: 20px;
   font-family: north;
   font-size: 1.5rem;
 }
 
-.main-menu ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: var(--space-m);
+nav.main-nav h1.logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
-.main-menu a:hover {
-  border-bottom: 5px solid var(--pink);
-}
-
-/* burgermenu */
-.toggle-btn {
-  background: transparent;
-  border: none;
-
-  font-size: 2rem;
-  cursor: pointer;
-
-  display: none; /* Skjul knappen som standard */
-}
-
-/* -----------om mig side------------ */
-.uddannelse {
-  margin-block: var(--space-s);
-  padding-inline: 20px;
-  border-right: 1px solid black;
-  list-style: none;
-  border-bottom: 1px solid black;
-}
-
-.uddannelse_ul {
-  gap: var(--space-l);
-}
-
-.erfaring {
-  margin-block: var(--space-s);
-  padding-inline: 20px;
-  border-left: 1px solid black;
-  list-style: none;
-}
-
-@media (max-width: 1200px) {
-  .toggle-btn {
-    display: block; /* Vis knappen, når viewporten maksimalt er 1200px */
-  }
-
-  .main-menu {
-    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
-  }
-
-  .main-menu ul {
-    display: none; /* Fjern menu-listen som standard */
-  }
-
-  .main-menu.shown ul {
-    /* Vis menu-listen, når klassen ".shown" er til stede */
-    border-top: 1px solid #000;
-    padding-top: 1rem;
-    display: flex;
-    flex: 1 1 100%;
-    flex-flow: column;
-  }
+.logo_1 {
+  font-family: north;
+  font-size: 3rem;
+  /* position: absolute;
+  top: 10px;
+  left: 1px; */
 }
 
 /* -------forside------- */
@@ -221,12 +204,16 @@ p {
 
 .grid_col_3_2 {
   margin-top: var(--space-m);
+  margin-bottom: var(--space-l);
   padding-block: var(--space-s);
   border-top: solid 1px black;
   list-style: none;
   font-family: apple_bold;
-  display: grid;
-  margin-bottom: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .grid_col_3_2 ul {
@@ -234,6 +221,7 @@ p {
   gap: 2rem;
   padding-block: var(--space-m);
   margin-bottom: var(--space-s);
+  margin-top: var(--space-m);
 }
 
 .grid_col_3_2 li {
@@ -242,20 +230,57 @@ p {
   cursor: pointer;
 }
 
-/* om mig side */
+/* -----------om mig side------------ */
+.uddannelse {
+  margin-block: var(--space-s);
+  padding-inline: 10px;
+  border-right: 1px solid black;
+  list-style: none;
+  border-bottom: 1px solid black;
+}
+
+.uddannelse h2 {
+  margin-bottom: 20px;
+}
+
+.uddannelse li {
+  margin-right: 20px;
+  margin-bottom: 100px;
+  font-family: apple_bold;
+  font-size: 1.1rem;
+  border-top: solid 1px black;
+}
+
+.erfaring {
+  margin-block: var(--space-s);
+  padding-inline: 10px;
+  border-right: 1px solid black;
+  list-style: none;
+  border-bottom: 1px solid black;
+}
+.erfaring h2 {
+  margin-bottom: 20px;
+}
+.erfaring li {
+  margin-right: 20px;
+  margin-bottom: 100px;
+  font-family: apple_bold;
+  font-size: 1.1rem;
+  border-top: solid 1px black;
+}
+
 .cv_titel {
   margin-block: var(--space-s);
-  padding-inline: 20px;
 }
 
 .cv_titel img {
-  margin-inline: 20px;
+  margin-inline: 40px;
   max-width: 80%;
 }
 
 .cv_2 {
   margin-block: var(--space-s);
-  padding-inline: 20px;
+  padding-inline: 10px;
   border-inline: 1px solid black;
 }
 .cv_2 h3 {
@@ -263,36 +288,20 @@ p {
 }
 .cv_3 {
   margin-block: var(--space-m);
-  padding-inline: 20px;
+  padding-inline: 10px;
   border-inline: 1px solid black;
 }
 .cv_3 p {
   margin-block: var(--space-s);
 }
 
-.uddannelse {
-  padding-inline: 40px;
-  margin-right: 20px;
-  padding-bottom: 20px;
-}
-
-.uddannelse li {
-  /* margin: 10px 0; */
-  margin-top: 10px;
-  margin-right: 0;
-  margin-bottom: 10px;
-  margin-left: 0;
-}
-
-.erfaring {
-  padding-inline: 40px;
-  margin-right: 20px;
-}
-
 .hvem_er {
   margin-block: var(--space-m);
   padding-inline: 20px;
   border-left: 1px solid black;
+}
+.hvem_er h2 {
+  margin-bottom: 10px;
 }
 .hvem_er p {
   padding-top: 10px;
@@ -337,5 +346,11 @@ p {
 /* -----------DESKTOP------------ */
 
 @media (min-width: 800px) {
-  /* om mig side */
+  .grid_col_3_2 ul {
+    font-size: 1.5rem;
+  }
+
+  .p3 {
+    margin-left: 10px;
+  }
 }
