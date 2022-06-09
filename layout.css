@@ -104,7 +104,7 @@ footer h3 {
   /* forside */
   .grid_col_3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
   }
   .col_2 {
     display: grid;
@@ -117,17 +117,25 @@ footer h3 {
 
   .col_3 {
     display: grid;
+    justify-content: end;
+    text-align: end;
+    align-items: right;
   }
 
-  .col_3 p,
+  /* .col_3 p,
   .col_3 img {
     grid-column: 3;
     margin-left: var(--space-s);
-  }
+  } */
   .kvadrat_forside {
     margin-left: var(--space-s);
     max-width: 60%;
   }
+
+  img[src="kvadrat_forside.JPG"] {
+    margin-left: 130px;
+  }
+
   .forside_look {
     grid-column: 1;
   }

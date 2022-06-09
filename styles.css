@@ -12,6 +12,12 @@ html {
   background-color: var(--beige);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -197,14 +203,17 @@ p {
 }
 .p2 {
   margin-block: var(--space-s);
-  padding-inline: 10px;
+  padding-inline: 40px;
   border-inline: solid 1px black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
 }
 .p3 {
   padding-top: var(--space-s);
   padding-inline: 10px;
   border-inline: solid 1px black;
-  text-align: right;
 }
 .grid_col_3 div {
   padding-bottom: var(--space-s);
@@ -260,16 +269,24 @@ p {
 .cv_3 p {
   margin-block: var(--space-s);
 }
+
 .uddannelse {
   padding-inline: 40px;
   margin-right: 20px;
   padding-bottom: 20px;
 }
 
+.uddannelse li {
+  /* margin: 10px 0; */
+  margin-top: 10px;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
 .erfaring {
   padding-inline: 40px;
   margin-right: 20px;
-  text-align: right;
 }
 
 .hvem_er {
