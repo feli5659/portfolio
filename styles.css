@@ -83,6 +83,7 @@ p {
   font-size: 0.9rem;
   font-kerning: none;
   font-family: oldnews, apple, "Times New Roman", Times, serif;
+  opacity: 70%;
 }
 
 .website_knap {
@@ -126,7 +127,7 @@ p {
 }
 
 .main-menu a:hover {
-  border-bottom: 5px solid var(--pink);
+  border-bottom: 5px solid var(--green);
 }
 
 /* burgermenu */
@@ -199,7 +200,7 @@ p {
 .grid_col_3_2 {
   margin-block: var(--space-m);
   padding-block: var(--space-s);
-  border-top: solid 1px black;
+  border-top: double 3px black;
   list-style: none;
   font-family: apple_bold;
   display: flex;
@@ -216,6 +217,11 @@ p {
   font-size: 1rem;
   padding-block: var(--space-m);
   margin-block: var(--space-s);
+}
+
+.grid_col_3_2 a:hover {
+  border-bottom: 5px solid var(--green);
+  font-size: larger;
 }
 
 .grid_col_3_2 li {
@@ -379,8 +385,16 @@ p {
   }
 
   /* om mig side */
+
+  .sect_3 {
+    padding-inline: 0;
+  }
+
   .uddannelse {
-    height: 680px;
+    height: 730px;
+    margin-block: 0;
+    padding-inline: 0;
+    margin-inline: 0;
   }
   .uddannelse li {
     font-size: 1.3rem;
