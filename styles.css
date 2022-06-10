@@ -349,12 +349,12 @@ p {
   margin-inline: 10px;
 }
 
-.grid_col_3_row_2 img {
+.process img {
+  border: solid 5px white;
   max-width: 80%;
   margin-inline: 3rem;
   margin-block: 10px;
 }
-
 .refleksion {
   margin-inline: 10px;
   border-inline: solid 1px black;
@@ -444,5 +444,42 @@ p {
 
   .erfaring li {
     margin-right: 0;
+  }
+
+  /* ----------tema1------ */
+  .grid_col_2 img {
+    max-width: 60%;
+    margin-left: var(--space-l);
+    margin-bottom: var(--space-m);
+  }
+  .grid_col_2 h2,
+  .grid_col_2 p {
+    border-left: solid 1px black;
+    padding-left: 20px;
+  }
+  .grid_col_2 p {
+    margin-top: 100px;
+    padding-right: 30px;
+  }
+  .grid_col_2 h2 {
+    padding-right: 110px;
+  }
+  .kompetencer li {
+    font-size: 1.3rem;
+    margin-bottom: 130px;
+  }
+  .refleksion p {
+    padding-inline: 40px;
+    margin-top: 10px;
+  }
+
+  .video_tema1 {
+    margin-top: 170px;
+    border-top: double 2px black;
+  }
+  .process {
+    margin-bottom: var(--space-l);
+    padding-bottom: 20px;
+    border-bottom: solid 1px black;
   }
 }
