@@ -1,6 +1,6 @@
 html {
   /* farvevariabler */
-  --green: #CAFDBE;
+  --green: #cafdbe;
   --pink: #ffb9ef;
   --beige: #ebe5dc;
 
@@ -83,7 +83,6 @@ p {
   font-size: 0.9rem;
   font-kerning: none;
   font-family: oldnews, apple, "Times New Roman", Times, serif;
-  opacity: 70%;
 }
 
 .website_knap {
@@ -93,6 +92,7 @@ p {
   cursor: pointer;
   padding: 10px;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 /* burgermenu */
@@ -243,11 +243,6 @@ p {
   padding-inline: 10px;
 }
 
-.cv_titel img {
-  margin-inline: var(--space-s);
-  max-width: 90%;
-}
-
 .cv_2 {
   margin-block: var(--space-s);
   padding-inline: var(--space-s);
@@ -266,9 +261,8 @@ p {
 }
 .uddannelse {
   margin-block: var(--space-s);
-  padding-inline: 30px;
   list-style: none;
-  border-bottom: 1px solid black;
+  border-bottom: 3px double black;
   margin-inline: 10px;
 }
 
@@ -325,36 +319,39 @@ p {
 
 /* -------tema 1----------- */
 
-.grid_col_2 {
+.layout_1_section_1 {
   margin-block: var(--space-s);
   margin-inline: 10px;
   padding-inline: var(--space-s);
   border-inline: 1px solid black;
+  border-bottom: 3px double black;
 }
-.grid_col_2 h2 {
+.layout_1_section_1 h2 {
   padding-bottom: var(--space-s);
 }
-.grid_col_2 img {
+.layout_1_section_1 img {
   margin-top: 20px;
   border: solid 6px white;
   box-shadow: 5px 3px 20px 1px grey;
 }
 
-.grid_col_3_row_2 {
+.layout_1_section_2 {
   margin-block: 10px;
   border-inline: 1px solid black;
   margin-inline: 10px;
+  border-bottom: 3px double black;
 }
-.grid_col_3_row_2 h2 {
+.layout_1_section_2 h2 {
   margin-inline: 10px;
 }
 
-.process img {
+.layout_1_section_2 .process img {
   border: solid 5px white;
   max-width: 80%;
-  margin-inline: 3rem;
+  margin-inline: 1rem;
   margin-block: 10px;
 }
+
 .refleksion {
   margin-inline: 10px;
   border-inline: solid 1px black;
@@ -366,6 +363,7 @@ p {
   margin-inline: 10px;
   padding-inline: var(--space-s);
 }
+
 .kompetencer h3 {
   margin-bottom: 20px;
 }
@@ -391,6 +389,52 @@ p {
 }
 .video_tema1 audio {
   padding-block: 20px;
+}
+
+/* -----------Tema 2------------ */
+.layout_2_section_1 {
+  margin-block: var(--space-s);
+  margin-inline: 10px;
+  padding-inline: var(--space-s);
+  border-inline: 1px solid black;
+}
+
+.layout_2_section_1 p,
+.layout_2_section_1 h2 {
+  margin-bottom: var(--space-s);
+}
+.layout_2_section_1 .cruise_img {
+  border: solid 5px white;
+}
+
+.kompetencer_2 {
+  margin-top: 20px;
+  margin-inline: 10px;
+  padding-inline: var(--space-s);
+}
+.kompetencer_2 h3 {
+  margin-bottom: 20px;
+}
+.kompetencer_2 ul {
+  padding-bottom: 20px;
+  font-family: apple_bold;
+  list-style: none;
+}
+.kompetencer_2 li {
+  border-top: solid 1px black;
+  margin-block: 50px;
+  padding-top: 10px;
+  padding-inline: 20px;
+}
+
+.refleksion_2 {
+  margin-block: var(--space-s);
+  padding-inline: var(--space-s);
+  border-inline: 1px solid black;
+  margin-inline: 10px;
+}
+.refleksion_2 p {
+  margin-bottom: 20px;
 }
 
 /* -----------DESKTOP------------ */
@@ -425,16 +469,20 @@ p {
   .sect_3 {
     padding-inline: 0;
   }
-
+  .cv_titel {
+    margin-bottom: var(--space-m);
+  }
+  .cv_titel img {
+    max-width: 95%;
+    margin-top: 20px;
+  }
   .uddannelse {
-    height: 730px;
     margin-block: 0;
     padding-inline: 0;
     margin-inline: 0;
   }
   .uddannelse li {
     font-size: 1.3rem;
-    margin-bottom: 210px;
   }
 
   .erfaring {
@@ -446,22 +494,23 @@ p {
     margin-right: 0;
   }
 
-  /* ----------tema1------ */
-  .grid_col_2 img {
+  /* ----------Layout 1------ */
+  .layout_1_section_1 img {
     max-width: 60%;
     margin-left: var(--space-l);
     margin-bottom: var(--space-m);
   }
-  .grid_col_2 h2,
-  .grid_col_2 p {
+  .layout_1_section_1 h2,
+  .layout_1_section_1 p {
     border-left: solid 1px black;
     padding-left: 20px;
   }
-  .grid_col_2 p {
+  .layout_1_section_1 p {
     margin-top: 100px;
     padding-right: 30px;
+    padding-bottom: 20px;
   }
-  .grid_col_2 h2 {
+  .layout_1_section_1 h2 {
     padding-right: 110px;
   }
   .kompetencer li {
@@ -473,13 +522,41 @@ p {
     margin-top: 10px;
   }
 
+  .refleksion {
+    margin-inline: 0;
+  }
+
   .video_tema1 {
     margin-top: 170px;
-    border-top: double 2px black;
+    border-top: double 3px black;
   }
   .process {
     margin-bottom: var(--space-l);
     padding-bottom: 20px;
-    border-bottom: solid 1px black;
+  }
+
+  /* ----------Layout 2------ */
+
+  .layout_1_section_1,
+  .layout_2_section_1,
+  .layout_1_section_2 {
+    margin-inline: 0;
+  }
+
+  .layout_2_section_1 h2,
+  .layout_2_section_1 p {
+    padding-right: var(--space-l);
+    border-right: 1px solid black;
+  }
+  .layout_2_section_1 .cruise_img {
+    margin-inline: var(--space-m);
+    max-width: 90%;
+  }
+
+  .refleksion_2 {
+    margin-inline: 30px;
+  }
+  .refleksion_2 p {
+    margin-bottom: 20px;
   }
 }
