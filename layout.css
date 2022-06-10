@@ -6,7 +6,29 @@
   box-sizing: border-box;
   /* ovenstående inkluderer padding og border i elementets totale højde og bredde */
 }
+/* -------Burgermenu--------- */
+@media (max-width: 900px) {
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 1200px */
+  }
 
+  .main-menu {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .main-menu ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .main-menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    border-top: 1px solid #000;
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+}
 /* -------Mobilefirst--------- */
 
 /* forside */
@@ -64,12 +86,6 @@
 .col_3 img {
   order: 1;
 }
-
-/* temasider */
-
-/* om mig */
-
-/* tema 1 */
 
 /* -----------FOOTER------------ */
 
@@ -166,7 +182,7 @@ footer h3 {
 
   /* temasider */
 
-  /* ----------tema 1------------ */
+  /* ----------Layout 1------------ */
 
   .layout_1_section_1 {
     display: grid;
@@ -184,8 +200,7 @@ footer h3 {
   }
   .layout_1_section_1 p {
     grid-column: 2;
-    grid-row: 1;
-    margin-top: 100px;
+    grid-row: 2;
   }
   .process {
     display: flex;
@@ -194,7 +209,10 @@ footer h3 {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
-
+  .t-shirt_img {
+    grid-column: 2;
+    grid-row: 2;
+  }
   .refleksion {
     display: grid;
     grid-column: 2;
@@ -206,7 +224,7 @@ footer h3 {
   .refleksion p {
     grid-column: 2;
   }
-  
+
   .kompetencer {
     grid-column: 1;
     grid-row: 1;
@@ -218,7 +236,7 @@ footer h3 {
   }
 
   /* ----------Layout 2------------ */
-  
+
   .layout_2_section_1 {
     display: grid;
   }
@@ -236,6 +254,5 @@ footer h3 {
 
   .refleksion_2 {
     grid-column: 2;
-  
   }
 }
