@@ -422,7 +422,8 @@ p {
 .layout_2_section_1 .cruise_img {
   border: solid 5px white;
 }
-.ruleofthirds {
+.ruleofthirds,
+.gomore {
   border: solid 5px white;
 }
 
@@ -588,7 +589,8 @@ p {
     border-right: 1px solid black;
   }
   .layout_2_section_1 .cruise_img,
-  .ruleofthirds {
+  .ruleofthirds,
+  .gomore {
     margin-inline: var(--space-m);
     margin-block: 10px;
     max-width: 90%;
@@ -597,6 +599,6 @@ p {
     margin-inline: 30px;
   }
   .refleksion_2 p {
-    margin-bottom: 20px;
+    margin-block: 15px;
   }
 }
