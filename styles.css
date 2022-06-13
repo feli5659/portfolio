@@ -85,6 +85,23 @@ p {
   font-family: oldnews, apple, "Times New Roman", Times, serif;
 }
 
+.puls {
+  animation-name: puls_kf;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes puls_kf {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 .website_knap {
   border: double 4px black;
   font-family: apple_bold;
@@ -93,6 +110,26 @@ p {
   padding: 10px;
   margin-bottom: 20px;
   margin-left: 20px;
+  animation-name: puls_kf;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+.website_knap_tema1 {
+  border: double 4px black;
+  font-family: apple_bold;
+  width: 200px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  animation-name: puls_kf;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
 }
 
 /* burgermenu */
@@ -140,8 +177,6 @@ p {
 
   display: none; /* Skjul knappen som standard */
 }
-
-
 
 /* ---------------forside-------------- */
 
@@ -387,6 +422,9 @@ p {
 .layout_2_section_1 .cruise_img {
   border: solid 5px white;
 }
+.ruleofthirds {
+  border: solid 5px white;
+}
 
 .kompetencer_2 {
   margin-top: 20px;
@@ -549,11 +587,12 @@ p {
     padding-right: var(--space-l);
     border-right: 1px solid black;
   }
-  .layout_2_section_1 .cruise_img {
+  .layout_2_section_1 .cruise_img,
+  .ruleofthirds {
     margin-inline: var(--space-m);
+    margin-block: 10px;
     max-width: 90%;
   }
-
   .refleksion_2 {
     margin-inline: 30px;
   }
