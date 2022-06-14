@@ -359,13 +359,20 @@ p {
 }
 .layout_1_section_2 h2 {
   margin-inline: 10px;
+  margin-bottom: 20px;
 }
 
 .layout_1_section_2 .process img {
   border: solid 5px white;
   max-width: 80%;
   margin-inline: 1rem;
-  margin-block: 10px;
+}
+
+.process_2 img {
+  border: solid 5px white;
+  max-width: 80%;
+  margin-inline: 1rem;
+  margin-bottom: 20px;
 }
 
 .refleksion {
@@ -406,6 +413,16 @@ p {
 }
 .video_tema1 audio {
   padding-block: 20px;
+}
+
+.layout_1_section_2 p {
+  margin-inline: 20px;
+  margin-bottom: 20px;
+}
+
+.process_2 p {
+  border-bottom: double 2px black;
+  height: 30%;
 }
 
 /* -----------Tema 2------------ */
@@ -486,6 +503,21 @@ p {
 .t-shirt_img img {
   margin-block: 10px;
   border: 3px solid white;
+}
+
+/* tema 5 */
+.layout_3_section_1 {
+  margin-block: var(--space-s);
+  margin-inline: 10px;
+  padding-inline: var(--space-s);
+  border-inline: 1px solid black;
+}
+.layout_3_section_1 p {
+  margin-block: 10px;
+}
+
+.grid_3_3 img {
+  margin-bottom: 20px;
 }
 
 /* -----------DESKTOP------------ */
@@ -573,19 +605,23 @@ p {
   .refleksion {
     margin-inline: 0;
   }
+  .refleksion_2 {
+    margin-inline: 0;
+  }
 
   .video_tema1 {
     margin-top: 20px;
   }
   .process {
-    margin-bottom: var(--space-l);
-    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
   .center_titel {
     margin-inline: 0;
-    padding-inline: 40px;
+    padding-inline: 60px;
   }
-  
+  .center_titel p {
+    padding-block: 10px;
+  }
 
   /* ----------Layout 2------ */
 
@@ -607,10 +643,24 @@ p {
     margin-block: 10px;
     max-width: 90%;
   }
-  .refleksion_2 {
+  /* .refleksion_2 {
     margin-inline: 30px;
-  }
+  } */
   .refleksion_2 p {
     margin-block: 15px;
+  }
+
+  /* tema 5 */
+  .layout_3_section_1 {
+    margin-inline: 0;
+  }
+  .layout_3_section_1 p {
+    padding-right: 20px;
+  }
+  .grid_3_3 {
+    border-left: solid 1px black;
+    padding-left: 10px;
+    align-content: center;
+    display: grid;
   }
 }
