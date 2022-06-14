@@ -5,6 +5,7 @@ const btn = document.querySelector(".toggle-btn");
 // Lav variablen "menu", der henviser til ".main-menu"
 const menu = document.querySelector(".main-menu");
 
+
 // Lav funktionen "toggleMenu()" med følgende funktionalitet
 function toggleMenu() {
   // a) toggle klassen "shown" på menu vha. classList.toggle
