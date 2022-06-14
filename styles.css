@@ -83,6 +83,7 @@ p {
   font-size: 0.9rem;
   font-kerning: none;
   font-family: oldnews, apple, "Times New Roman", Times, serif;
+  opacity: 70%;
 }
 
 .puls {
@@ -456,6 +457,16 @@ p {
 .refleksion_2 p {
   margin-bottom: 20px;
 }
+
+.quote {
+  text-align: center;
+  border-inline: solid 1px black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-bottom: var(--space-s);
+}
+
 .center_titel {
   text-align: center;
   margin-top: var(--space-s);
@@ -564,8 +575,7 @@ p {
   }
 
   .video_tema1 {
-    margin-top: 170px;
-    border-top: double 3px black;
+    margin-top: 20px;
   }
   .process {
     margin-bottom: var(--space-l);
@@ -573,7 +583,9 @@ p {
   }
   .center_titel {
     margin-inline: 0;
+    padding-inline: 40px;
   }
+  
 
   /* ----------Layout 2------ */
 
