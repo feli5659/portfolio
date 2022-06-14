@@ -521,8 +521,6 @@ p {
   border: 3px solid white;
 }
 
-
-
 /* tema 5 */
 .layout_3_section_1 {
   margin-block: var(--space-s);
@@ -544,8 +542,11 @@ p {
   border: 4px solid var(--green);
 }
 
-.lighthouse img {
-  border: var(--green) 4px solid;
+.sitemap_portfolio {
+  border: 5px black double;
+  width: 50%;
+  padding: 30px;
+  margin-bottom: var(--space-m);
 }
 
 /* -----------DESKTOP------------ */
