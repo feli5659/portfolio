@@ -508,7 +508,7 @@ p {
   margin-inline: 10px;
   margin-bottom: 40px;
 }
-.center_titel h2,
+.center_titel h1,
 .center_titel h3 {
   padding-bottom: 10px;
 }
@@ -520,6 +520,8 @@ p {
   margin-block: 10px;
   border: 3px solid white;
 }
+
+
 
 /* tema 5 */
 .layout_3_section_1 {
