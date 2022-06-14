@@ -541,12 +541,15 @@ p {
   margin-block: 10px;
   border: 4px solid var(--green);
 }
-
+.sitemap_portfolio img {
+  max-width: 50%;
+}
 .sitemap_portfolio {
   border: 5px black double;
-  width: 50%;
   padding: 30px;
   margin-bottom: var(--space-m);
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* -----------DESKTOP------------ */
