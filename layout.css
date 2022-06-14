@@ -210,7 +210,6 @@ footer h3 {
     grid-template-columns: 1fr 1fr;
   }
 
-
   .layout_1_section_3 {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -277,14 +276,25 @@ footer h3 {
 
   /* tema 5  */
   .layout_3_section_1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
   }
   .grid_1_3 {
     grid-column: 2;
   }
   .grid_2_3 {
     grid-column: 1;
+  }
+
+  .lastp {
+    grid-column: 3;
+  }
+  .lighthouse {
+    grid-column: 3;
+  }
+  .menu_img {
+    grid-column: 2;
+    grid-row: 2;
   }
 }

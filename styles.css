@@ -416,13 +416,29 @@ p {
 }
 
 .layout_1_section_2 p {
-  margin-inline: 20px;
+  margin-inline: 10px;
   margin-bottom: 20px;
 }
 
 .process_2 p {
   border-bottom: double 2px black;
   height: 30%;
+}
+.wireframe {
+  padding-left: 20px;
+  border-bottom: double 3px black;
+  padding-bottom: 10px;
+}
+.wireframe_copy {
+  border-bottom: double 3px black;
+}
+.lastp {
+  border-left: double 3px black;
+  padding-left: 20px;
+}
+
+.menu_img {
+  border: solid 5px var(--green);
 }
 
 /* -----------Tema 2------------ */
@@ -520,6 +536,10 @@ p {
   margin-bottom: 20px;
 }
 
+.pinterest {
+  margin-block: 10px;
+  border: 4px solid var(--green);
+}
 /* -----------DESKTOP------------ */
 
 @media (min-width: 800px) {
