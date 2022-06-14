@@ -180,6 +180,11 @@ footer h3 {
     grid-column: 1;
   }
 
+  .knap_div {
+    display: flex;
+    justify-content: center;
+  }
+
   /* temasider */
 
   /* ----------Layout 1------------ */
