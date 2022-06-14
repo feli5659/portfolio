@@ -182,7 +182,7 @@ footer h3 {
 
   .knap_div {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   /* temasider */
